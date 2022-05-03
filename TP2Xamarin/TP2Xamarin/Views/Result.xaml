@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP2Xamarin.Views.Result" Title="Result">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <StackLayout Style="{StaticResource head}" >
+                <Label TextColor="Beige" Text="Victory !!!!" Style="{StaticResource headLabel}"/>
+            </StackLayout>
+            <StackLayout Style="{StaticResource body}" >
+                <StackLayout HeightRequest="210">
+                    <Image Source="victory.gif" HeightRequest="150"/>
+                    <Label TextColor="Beige" HorizontalTextAlignment="Center" FontSize="Medium"  VerticalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Le nombre à trouver était le : "/>
+                                    <Span x:Name="MagicNumberSpan" FontAttributes="Bold"/>
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <Button Text="Home" Style="{StaticResource bodyButton}" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
